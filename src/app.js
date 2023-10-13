@@ -6,8 +6,9 @@ import "./assets/img/4geeks.ico";
 
 window.onload = () => {
   //write your code here
-
-  document.querySelector("#excuse").innerHTML = generatorExcuses();
+  document.querySelector("#btn").addEventListener("click", () => {
+    document.querySelector("#excuse").innerHTML = generatorExcuses();
+  });
 
   console.log("Hello Rigo from the console!");
 };
