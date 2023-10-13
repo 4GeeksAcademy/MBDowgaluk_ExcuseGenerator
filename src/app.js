@@ -1,16 +1,12 @@
 import "bootstrap";
 import "./style.css";
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = () => {
-  //write your code here
-  document.querySelector("#btn").addEventListener("click", () => {
-    document.querySelector("#excuse").innerHTML = generatorExcuses();
+  document.querySelector("#buttonExcuse").addEventListener("click", () => {
+    document.querySelector("#excuseGenerator").innerHTML = generatorExcuses();
   });
-
-  console.log("Hello Rigo from the console!");
 };
 
 let generatorExcuses = () => {
@@ -26,21 +22,21 @@ let generatorExcuses = () => {
     "while I was praying"
   ];
 
-  let pronIndx = Math.floor(Math.random() * pronombre.length);
-  let sujIndx = Math.floor(Math.random() * sujeto.length);
-  let accIndx = Math.floor(Math.random() * accion.length);
-  let queIndx = Math.floor(Math.random() * que.length);
-  let dondIndx = Math.floor(Math.random() * donde.length);
+  let pronombreIndex = Math.floor(Math.random() * pronombre.length);
+  let sujetoIndex = Math.floor(Math.random() * sujeto.length);
+  let accionIndex = Math.floor(Math.random() * accion.length);
+  let queIndex = Math.floor(Math.random() * que.length);
+  let dondeIndex = Math.floor(Math.random() * donde.length);
 
   return (
-    pronombre[pronIndx] +
+    pronombre[pronombreIndex] +
     " " +
-    sujeto[sujIndx] +
+    sujeto[sujetoIndex] +
     " " +
-    accion[accIndx] +
+    accion[accionIndex] +
     " " +
-    que[queIndx] +
+    que[queIndex] +
     " " +
-    donde[dondIndx]
+    donde[dondeIndex]
   );
 };
